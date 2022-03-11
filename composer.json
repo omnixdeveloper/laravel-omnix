@@ -1,0 +1,41 @@
+{
+    "name": "omnixdeveloper/laravel-omnix",
+    "description": "Omnix json rpc api",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "Ethereum",
+        "Laravel"
+    ],
+    "authors": [
+        {
+            "name": "lee",
+            "email": "jcsoft@aliyun.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "~5.3|~6.2",
+        "kornrunner/ethereum-address": "^0.3.0",
+        "kornrunner/ethereum-offline-raw-tx": "^0.4.0",
+        "kornrunner/ethereum-token": "^0.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "omnixdeveloper\\LaravelOmnix\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "omnixdeveloper\\LaravelOmnix\\OmnixServiceProvider"
+            ],
+            "aliases": {
+                "Ethereum": "omnixdeveloper\\LaravelOmnix\\Facade\\Ethereum"
+            }
+        }
+    }
+}
